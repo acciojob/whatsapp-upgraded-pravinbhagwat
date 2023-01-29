@@ -16,7 +16,7 @@ public class WhatsappService {
         whatsappRepository.createUser(name, mobile);
     }
 
-    public Group createGroup(List<User> users){
+    public Group createGroup(List<User> users) throws Exception{
         Group group=whatsappRepository.createGroup(users);
         return group;
     }
@@ -39,7 +39,7 @@ public class WhatsappService {
     }
 
 
-    public String findMessage(Date start, Date end, int k) {
-        return null;
+    public String findMessage(Date start, Date end, int k) throws Exception {
+        return whatsappRepository.findMessage(start, end, k);
     }
 }
