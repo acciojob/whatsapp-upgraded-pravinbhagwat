@@ -153,9 +153,10 @@ public class WhatsappRepository {
                 }
             }
         }
-        if (!check) {
+        if (!check || group1 == null) {
             throw new Exception("User not found");
         }
+
 
         if (groupHashMap.get(group1).get(0).equals(user)) {
             throw new Exception("Cannot remove admin");
